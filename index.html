@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+
+    
+
+    <script>
+  
+            let container = document.createElement("div");
+
+            container.innerHTML = ` <input id="input"> <br>
+                                    <button id ="button">click for odd number </button>
+                                    <h4 id="output">  </h4>`
+
+            document.body.appendChild(container)
+
+            container.style.textAlign="center"
+
+
+
+            let input = document.querySelector("#input")
+
+            let output = document.querySelector("#output")
+
+
+
+            let button = document.querySelector("#button")
+
+            button.addEventListener("click",()=>
+            {
+
+
+                const promisef = new Promise((resolve,reject)=>{
+
+                    var b = [input.value ]
+
+                    if(b %2 ==0){
+
+                        resolve("fullfilled")
+                        output.innerHTML = "The number even"
+                        console.log(output)
+                    }else
+                    {
+                        reject(" error")
+
+                        output.innerHTML = "The number odd"
+                        console.log(output)
+                    }
+
+                    })
+
+            return promisef
+            })
+  </script>
+</body>
+</html>
